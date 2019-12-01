@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Counting Numbers</title>
+</head>
+<body>
+    <!--<a href="./index.html">Counting Numbers</a> adds clickable links on top that we can use if we don't want to put everything on one page -->
+    
+  
+  <h1>Counting Numbers </h1>
+  <div id="introduction">
+    <h3 style="line-height: 0.002;">What are Counting Numbers?</h3>
+    <p style="line-height:0.5"> <em>Counting, Combinatorics, Real World Applications/Uses</em></p>
+    <p>Counting numbers sounds like exactly what it's about, counting numbers. We use combinatorics to help us with counting, and this can be referred to as "enumerative combinatorics." </p>
+    <p>Combinatorics are useful when we try to figure out the number of possible outcomes based on the number of decisions. 
+    </p>
+    <p>Perhaps best used today by social media to find connections with people we do not directly know, like for example Instagram. You have followers, and those followers have their own followers, and those followers have their own followers and so on. Combinatorics in this case is used to help you find people who you can follow based off various things, such as mutual followers. 
+    </p>
+    <p>Combinatorics are also used in probability to discover the chance of getting a desired outcome.
+    </p>
+    <h2><b>Combinatorics</b></h2>
+    <p><b>Combinatorics</b>: The branch of mathematics dealing with combinations of objects belonging to a finite set in accordance with certain constraints, such as those of graph theory.
+    </p>
+    <a href="https://en.wikipedia.org/wiki/Enumerative_combinatorics" target="_blank">Learn More</a>
+    <h3>Overview of Counting Numbers</h3>
+    <nav>
+            <ul>
+              <li><a href="#addition">Addition Rule</a></li>
+              <li><a href="#multiplication">Multiplcation Rule</a></li>
+              <li><a href="#permutation">Permutation</a></li>
+              <li><a href="#combination">Combination</a></li>
+            </ul>
+    </nav>
+ </div>
+  <div id="addition">
+    <h2>Addition Rule</h2>
+     <p><b><em>Question</em></b>: You want to buy a cell phone, the local verizon store has three iPhone 11’s on sale (black, white, purple) and two Samsung Galaxy 10’s on sale (black, white). How many possible ways are there to pick a phone?</p>
+     <p><b><em>Solution</em></b>: You can purchase either an iPhone 11 or a Samsung Galaxy 10. Since there are three ways to pick an iPhone and two ways to pick a Samsung Galaxy 10 there are five ways to pick a phone (3+2=5)</p>
+     <p><b>Addition Rule</b>: If we have two choices C1 and C2, with C1 having possible outcomes O1 and C2 having possible outcomes O2, with |O1| =n1 and |O2| =n2, then if the sets O1 and O2 are disjoint (non-overlapping) the total number of outcomes for C1 or C2 having n1,..., nk possible (non-overlapping) outcomes, then the total number of ways of C1 occurring or C2 occuring or Ck occuring is n1+n2+.....+nk. </p>
+     <p>In combinatorics, the addition rule is stated simply as the idea that if we have A ways of doing something and B ways of doing another thing and we can not do both at the same time, then there are A + B ways to choose one of the actions.</p>
+  </div>
+  <div id="multiplcation">
+    <h2>Multiplcation Rule</h2>  
+    <p><b><em>Question</em></b>: There are three types of shoes: boots, sneakers, and dress shoes. Each shoe comes in two colors, black or brown. How many possible shoe configurations are there?</p>
+    <p><b><em>Solution</em></b>: First we must make our first choice, C1, which is the type of shoe. Then our second choice, C2, is what color of shoe. The outcome of C1 contains four possibilities, |O1| = 3, and the outcome of C2 contains 2 possibilities, |O2| = 2. Now we apply the multiplication rule: Total number of outcomes = |O1| x |O2| = 3 x 2 = 6. Therefore there are 6 total shoe configurations. </p>
+    <p><b>Multiplication Rule</b>: If we have two choices C1 and C2, with C1 having possible outcomes O1 and C2 having possible outcomes O2, with |O1| = n1 and |O2| = n2, then the total number of possible outcomes associated with C1 and C2 occurring is n1 x n. More generally, if we have k choices C1, … , Ck having n1, … , nk possible outcomes, then the total number of ways of C1 occurring and C2 occurring and … and Ck occurring is n1 x n2 x … x nk. </p>
+    <p>In combinatorics, the multiplication rule is stated simply as the idea that if there are a ways of doing something and b ways of doing another thing, then there are a x b ways of performing both actions.</p>
+  </div>
+  <div id="permutation">
+    <h2>Permutation</h2>
+    <p><b><em>Question</em></b>: You want to place 4 students in 4 seats. How many different ways can their seats be arranged?</p>
+    <p><b><em>Solution</em></b>: There are 4 students, there's 4 kids who can sit in the first seat. After, there are now 3 students to pick from for the second seat, once a student is selected for the second seat, then now there is only two students left for the third seat and after that seating is done, there's one student left for the last seat. There are 24 ways of seating the students, 4 x 3 x 2 x 1 = 24.</p>
+    <p><b>Permutation</b>: A permutation of objects is an arrangement of those objects where order does matter. For example a pass code of 1234 is different from a pass code of 4321. Even though both codes contain the same numbers (1234) they are not the same because the order of those numbers are different. Also, each object can only be used once in the permutation.</p>
+    <img src="https://ncalculators.com/formula-images/statistics/npr-permutation-formula.png" />
+    <p>The formula for calculating the number of permutations for r items chosen from a total of n items is denoted P(n, r). So the number of ways to permute four students into four chairs would be P(4, 4). The formula for calculating P(n, r) is given above, by plugging in n as 4 and r as 4, you will get 24.</p>
+    <a href="https://www.calculator.net/permutation-and-combination-calculator.html?cnv=4&crv=4&x=90&y=7" target="_blank">Calculator for Permutation and Combination</a>
+    <h3>Permutation Quiz</h3>
+    <p><b><em>Question 1</em></b>: A club of six people want to pick a president and a vice president for their club. How many ways are there to fill those positions?</p>
+    <p><b><em>Hint</em></b>:Order does matter (A is president and B is vice president is different from B is president and A is vice president) and you cannot use one person more than once (one person cannot be president and vice president) so you can use permutations. Use the formula for permutation P(n, r).</p>
+    <p><b><em>Answer</em></b>:30</p>
+    <p><b><em>Question 2</em></b>: You have five baseball players on your roster and you want to make a batting order consisting of only three players. How many different ways can you arrange your batting order?</p>
+    <p><b><em>Hint</em></b>: You have a permutation question where you want to pick three players from a total of five. You can use the formula for P(n, r). </p>
+    <p><b><em>Answer</em></b>:20</p>
+    <p><b><em>Question 3</em></b>: How many ways are there to arrange the letters in the word MATH?</p>
+    <p><b><em>Hint</em></b>: How many letters can go into the first place? Once that is filled up, how many letters can then go in the second space? So on and so forth…</p>
+    <p><b><em>Answer</em></b>:24</p>
+    <!--<p><b><em>putstuffhere</em></b></p>-->
+  </div>
+  <div id="combination">
+    <h2>Combination</h2>
+    <p><b><em>Question</em></b>: You are hanging out with your friends. There's only two people who you want to hangout with at a time, but you have 4 friends, Alice, Bob, Charlie, and Daniel. How many ways can you pick 2 friends to hangout with among 4 friends?</p>
+    <p><b><em>Solution</em></b>: You can hangout with Bob and Charlie, which is the same as Charlie and Bob. In this case, you can list out every possible combination of friends and remove the duplicate, or you can use the formula.</p>
+    <p>The formula for calculating the number of combinations for r items chosen from a total of n items is denoted C(n, r). So the number of combinations for choosing two friends to go out with from four friends is C(4, 2). The formula for calculating C(n, r) is:</p>
+    <img src="https://ncalculators.com/formula-images/statistics/ncr-combination-formula.png" />
+    <p>So the answer would be: C(4, 2) = 4!/(2!(4-2)!) = 6</p>
+    <p><b>Combination</b>: A combination of objects is an arrangement of those objects where the order does not matter.</p>
+    <h3>Combination Quiz</h3>
+    <p><b><em>Question 1</em></b>: Bob is packing his bags for vacation. He has eight unique shirts but can only fit five in his bag. How many different groups of five shirts can he take?</p>
+    <p><b><em>Hint</em></b>:Order doesn’t matter and you can’t use a shirt more than once so it is asking for combinations. Use the formula for C(n, r).</p>
+    <p><b><em>Answer</em></b>:56</p>
+    <p><b><em>Question 2</em></b>: How many ways can a coach choose five players from among seven players to be on a basketball team? </p>
+    <p><b><em>Hint</em></b>:You need to find the number of combinations of five players from seven players. Therefore, you need to find C(7, 5).</p>
+    <p><b><em>Answer</em></b>:21</p>
+    <p><b><em>Question 3</em></b>: A student has eight more classes they need to take to complete their degree. How many ways can they take four classes next semester, assuming all eight classes are available? </p>
+    <p><b><em>Hint</em></b>:You need to find the number of combinations of four classes from eight classes. Therefore, you need to find C(8, 4).</p>
+    <p><b><em>Answer</em></b>:70</p>
+  </div>
+<div id="reference">
+    <h2>Reference</h2>
+    <p>Here are some helpful images and videos to assist you in studying!</p>
+    <img src="https://s3.amazonaws.com/learningstridespublic/publicimages/permutation_1.png" />
+    <!--links for future video references once i figure out how those work https://www.youtube.com/watch?v=p8vIcmr_Pqo and https://www.youtube.com/watch?v=DROZVHObeko-->
+    
+</div>
+</body>
+</html>
+
