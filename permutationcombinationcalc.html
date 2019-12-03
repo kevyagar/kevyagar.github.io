@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <script>
+        function factorial(n){
+            var tempTotal=1;
+            for (let i=n;i>0;i--){
+                tempTotal*=i;
+            }
+            return tempTotal;
+        }
+        
+        function permutationCalc(){
+            var n, r, result;
+            n = document.getElementById("n").value;
+            r = document.getElementById("r").value;
+            result = factorial(n)/factorial(n-r);
+            document.getElementById("result").innerHTML = "Result = " + result;
+        }
+        
+        function combinationCalc(){
+            var n, r, result;
+            n = document.getElementById("n").value;
+            r = document.getElementById("r").value;
+            result = factorial(n)/(factorial(r)*factorial(n-r));
+            document.getElementById("result").innerHTML = "Result = " + result;
+        }
+    </script>
+</head>
+<body>
+<h2>Permutation and Combination Calculator</h2>
+n = <input id="n">
+<br>
+r = &nbsp;<input id="r">
+<p>Choose either permutation or combination:</p>
+<button type="button" onclick="permutationCalc()">Permutation</button>
+<button type="button" onclick="combinationCalc()">Combination</button>
+<p id="result"></p>
+<br>
+<img src="https://ncalculators.com/formula-images/statistics/npr-permutation-formula.png" />
+<br style="line-height:5;"></br>
+<img src="https://ncalculators.com/formula-images/statistics/ncr-combination-formula.png" />
+</body>
+</html>

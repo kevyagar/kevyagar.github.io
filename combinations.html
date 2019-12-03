@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinations</title>
+    <script>
+    function combHint1() {
+      document.getElementById("combHint1Text").innerHTML = "Order does not matter and you " +
+      "cannot use a shirt more than once so it is asking for combinations. " +
+      "Use the formula for C(n, r).";
+    }
+    
+    function combHint2() {
+      document.getElementById("combHint2Text").innerHTML = "You need to find the number of "+
+      "combinations of five players from seven players. Therefore, you need to find C(7, 5).";
+    }
+    
+    function combHint3() {
+      document.getElementById("combHint3Text").innerHTML = "You need to find the number of "+
+      "combinations of four classes from eight classes. Therefore, you need to find C(8, 4).";
+    }
+    
+    function combQ1Check() {
+        var combQ1In, combQ1Result;
+        combQ1In = document.getElementById("combQ1Input").value;
+        if (combQ1In == 56) {
+            combQ1Result = "Correct!";
+        } else {
+            combQ1Result = "Incorrect";
+        }
+        document.getElementById("combQ1Output").innerHTML = combQ1Result;
+    }
+    
+    function combQ2Check() {
+        var combQ2In, combQ2Result;
+        combQ2In = document.getElementById("combQ2Input").value;
+        if (combQ2In == 21) {
+            combQ2Result = "Correct!";
+        } else {
+            combQ2Result = "Incorrect";
+        }
+        document.getElementById("combQ2Output").innerHTML = combQ2Result;
+    }
+    
+    function combQ3Check() {
+        var combQ3In, combQ3Result;
+        combQ3In = document.getElementById("combQ3Input").value;
+        if (combQ3In == 70) {
+            combQ3Result = "Correct!";
+        } else {
+            combQ3Result = "Incorrect";
+        }
+        document.getElementById("combQ3Output").innerHTML = combQ3Result;
+    }
+    </script>
+</head>
+<h2>Combination</h2>
+<body>
+    <p>
+    <b><em>Question</em></b>: You are hanging out with your friends. There's only two
+    people who you want to hangout with at a time, but you have 4 friends, Alice, Bob,
+    Charlie, and Daniel. How many ways can you pick 2 friends to hangout with among 4 friends?
+    </p>
+    <p>
+    <b><em>Solution</em></b>: You can hangout with Bob and Charlie, which is the same as
+    Charlie and Bob. In this case, you can list out every possible combination of
+    friends and remove the duplicate, or you can use the formula.
+    </p>
+    <p>
+    The formula for calculating the number of combinations for r items chosen from a
+    total of n items is denoted C(n, r). So the number of combinations for choosing two
+    friends to go out with from four friends is C(4, 2). The formula for calculating C(n, r) is:
+    </p>
+    <img src="https://ncalculators.com/formula-images/statistics/ncr-combination-formula.png" />
+    <p>So the answer would be: C(4, 2) = 4!/(2!(4-2)!) = 6</p>
+    <p><b>Combination</b>: A combination of objects is an arrangement of those objects where the order does not matter.</p>
+    <a href="permutationcombinationcalc.html">Calculator for Permutation and Combination </a>
+    <h3>Combination Quiz</h3>
+    <p>
+    <b><em>Question 1</em></b>: Bob is packing his bags for vacation. He has eight unique
+    shirts but can only fit five in his bag. How many different groups of five shirts can he take?
+    </p>
+    <input id="combQ1Input">
+    <button type="button" onclick="combQ1Check()">Check</button>
+    <button onclick="combHint1()">Hint</button>
+    <p id="combQ1Output"></p>
+    <p id="combHint1Text"></p>
+    <p>
+    <b><em>Question 2</em></b>: How many ways can a coach choose five players from among
+    seven players to be on a basketball team?
+    </p>
+    <input id="combQ2Input">
+    <button type="button" onclick="combQ2Check()">Check</button>
+    <button onclick="combHint2()">Hint</button>
+    <p id="combQ2Output"></p>
+    <p id="combHint2Text"></p>
+    <p>
+    <b><em>Question 3</em></b>: A student has eight more classes they need to take to
+    complete their degree. How many ways can they take four classes next semester, assuming
+    all eight classes are available?
+    </p>
+    <input id="combQ3Input">
+    <button type="button" onclick="combQ3Check()">Check</button>
+    <button onclick="combHint3()">Hint</button>
+    <p id="combQ3Output"></p>
+    <p id="combHint3Text"></p>
+</body>
+</html>
